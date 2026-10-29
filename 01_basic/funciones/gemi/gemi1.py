@@ -13,7 +13,9 @@ y lo convierta en formato titulo. Luego aplicala a toda una lista usando map
 
 usuarios_sucios = ["  carlos mendoza ", "ana gomez", "  LUIS TORRES  ", "maria perez "]
 
-limpieza_datos = lambda nombre: " ".join([n.capitalize() for n in nombre.strip().lower().split(" ")])
+# limpieza_datos = lambda nombre: " ".join([n.capitalize() for n in nombre.strip().lower().split(" ")])
+
+limpieza_datos = lambda nombre: nombre.strip().title()
 
 usuarios_limpios = list(map(limpieza_datos, usuarios_sucios))
 
