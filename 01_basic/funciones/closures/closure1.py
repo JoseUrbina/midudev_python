@@ -31,9 +31,9 @@ saluda_bienvenida("Marcos") -> Resultado esperado: "Bienvenido a bordo, Marcos!"
 
 from typing import Callable
 
-def crear_saludador(saludo: str):
+def crear_saludador(saludo: str) -> Callable[[str], str]:
 
-    def saludo_completo(nombre: str):
+    def saludo_completo(nombre: str) -> str:
         return f"{saludo}, {nombre}!"
 
     return saludo_completo
